@@ -69,10 +69,11 @@ img {
     width: 150px;
     height: 200px;
 }
-.lancamentos{
+.lancamentos{ 
     transition: 0.2s;
     cursor: pointer;
     margin: 0 5px;
+    
 }
 .lancamentos:hover{
     border: 2px solid white;
@@ -96,7 +97,61 @@ img {
 ::-webkit-scrollbar-thumb{
     background-color: #1d2b40;
     border-radius: 25px;
+    
 }
 ::-webkit-scrollbar-thumb:hover{
-    background-color: #142b4d; 
+    background-color: #142b4d;
+}
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 15px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    
+}
+.menu-btn__burger {
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    
+    transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    
+    transition: all .5s ease-in-out;
+
+}
+.menu-btn__burger::before {
+    transform: translateY(-5px);
+}
+.menu-btn__burger::after{
+    transform: translateY(5px);
+}
+/*Animation for btnBurger*/
+
+.menu-btn.open .menu-btn__burger{
+    transform: translateX(-20px);
+    background: transparent;
+    box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before{
+    transform:rotate(45deg) translate(15px,-15px);
+    background-color: #ba4155;
+}
+.menu-btn.open .menu-btn__burger::after{
+    background-color: #ba4155;
+    transform:rotate(-45deg) translate(15px, 15px);
 }
