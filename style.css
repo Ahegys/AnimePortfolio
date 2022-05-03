@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+    background: #1d2b40;
+    color: white;
+}
+.menuB{
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "main main main" "header conteudo aside" "footer footer footer";
+    grid-template-rows: 50px 1fr  20px;
+    grid-template-columns: 10% 2fr 10%;
+    
+}
+.red{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    grid-area: main;
+}
+.blue{
+    background-color: #1b212b;
+    text-align: center;
+    grid-column: header;
+}
+.green{
+    background-color: #1b212b;
+    text-align: center;
+    grid-column: aside;
+}
+.white{
+    grid-template-areas:
+    "title"
+    "animeList"
+    "otherList"
+    "gameP";
+    color: black;
+    text-align: center;
+    background-color: #101926;
+    grid-area: conteudo;
+    
+    
+}
+
+.carrossel{
+    max-width: 80vw;
+    display: flex;
+    overflow-y: hidden;
+    height: 240px;
+    grid-area: "animeList";
+}
+.footer{
+    text-align: center;
+    grid-area: footer;
+}
+img {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    width: 150px;
+    height: 200px;
+}
+.lancamentos{
+    transition: 0.2s;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.lancamentos:hover{
+    border: 2px solid white;
+    transform: scale(1.1);
+    box-shadow: 1px 2px 20px #616161;
+    
+}
+.texts{
+    grid-area: "title";
+    margin-bottom: 5px;
+    color: white;
+    font-size: 26px;
+}
+
+::-webkit-scrollbar{
+    
+    background-color: #1b212b;
+    height: 10px;
+   
+}
+::-webkit-scrollbar-thumb{
+    background-color: #1d2b40;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #142b4d; 
+}
